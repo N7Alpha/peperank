@@ -1,0 +1,5 @@
+python3 ./retrain.py --image_dir ./images --learning_rate=0.0001 --testing_percentage=20 --validation_percentage=20 --train_batch_size=32 --validation_batch_size=-1 --flip_left_right True --random_scale=30 --random_brightness=30 --eval_step_interval=100 --how_many_training_steps=2 --architecture mobilenet_1.0_192
+
+
+
+python3 ./label_image.py --graph=./output_graph.pb --labels=./output_labels.txt --image=./yoda.jpg --input_layer=input --output_layer=final_result --input_mean=128 --input_std=128 --input_width=192 --input_height=192
